@@ -1,0 +1,68 @@
+<div class="all-inventory">
+    <div class="all-inventory__heading">Выберите скины</div>
+    <div class="all-inventory-info">
+        <div class="all-inventory-info__item">
+            <div class="all-inventory-info__item-title">Вы заплатите:</div>
+            <div class="all-inventory-info__item-content">$0</div>
+        </div>
+        <div class="all-inventory-info__item">
+            <div class="all-inventory-info__item-title">Выбрано на:</div>
+            <div class="all-inventory-info__item-content">$0</div>
+        </div>
+        <div class="all-inventory-info__item">
+            <div class="all-inventory-info__item-title">Вы получите:</div>
+            <div class="all-inventory-info__item-content">$0</div>
+        </div>
+    </div>
+    <div class="all-inventory-filter">
+        <div class="all-inventory-filter__item all-inventory-filter__item-name">
+            <input type="text" class="all-inventory-filter__name" placeholder="Name">
+        </div>
+        <div class="all-inventory-filter__item all-inventory-filter__item-price">
+            <svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.26418 7.29375L3.51338 6.30625C3.07926 6.19375 2.77711 5.82812 2.77711 5.42188C2.77711 4.9125 3.23554 4.5 3.80164 4.5H6.10421C6.52792 4.5 6.94467 4.61562 7.29197 4.82812C7.50382 4.95625 7.7886 4.925 7.9692 4.76562L9.17779 3.70312C9.42437 3.4875 9.38964 3.12812 9.11528 2.9375C8.2644 2.3375 7.20167 2.00312 6.11116 2V0.5C6.11116 0.225 5.8611 0 5.55548 0H4.44413C4.13851 0 3.88846 0.225 3.88846 0.5V2H3.80164C1.58935 2 -0.188806 3.70938 0.0160996 5.7375C0.161964 7.17813 1.38445 8.35 2.92645 8.75625L6.48624 9.69375C6.92036 9.80938 7.22251 10.1719 7.22251 10.5781C7.22251 11.0875 6.76408 11.5 6.19798 11.5H3.89541C3.4717 11.5 3.05495 11.3844 2.70765 11.1719C2.4958 11.0437 2.21102 11.075 2.03042 11.2344L0.821828 12.2969C0.575247 12.5125 0.609977 12.8719 0.884342 13.0625C1.73522 13.6625 2.79795 13.9969 3.88846 14V15.5C3.88846 15.775 4.13851 16 4.44413 16H5.55548C5.8611 16 6.11116 15.775 6.11116 15.5V13.9937C7.72956 13.9656 9.24725 13.1 9.78209 11.7219C10.5288 9.79688 9.27503 7.82187 7.26418 7.29375Z" fill="#4DB283"/>
+            </svg>
+            <input type="text" placeholder="Price">
+        </div>
+        <div class="all-inventory-filter__item all-inventory-filter__item-select">
+            <select>
+                <option value="">All</option>
+                <option value="">Not All</option>
+                <option value="">Not at all</option>
+            </select>
+        </div>
+    </div>
+    <div class="all-inventory-list">
+        <div class="all-inventory-list-track has-styled-scrollbar">
+            <!-- card -->
+            @@include("../card/cards-types/card-rare-with-amount.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-rare-with-amount.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+            <!-- card -->
+            @@include("../card/cards-types/card-ancient.html")
+        </div>
+    </div>
+    <div class="all-inventory-manage">
+        <a href="#" class="def-btn def-btn--accent all-inventory-manage__submit">Подтвердить</a>
+        <a href="#" class="def-btn def-btn--blue all-inventory-manage__reload">
+            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2275 8.06932C12.833 7.94407 12.4115 8.16232 12.2855 8.55682C11.5827 10.7663 9.51424 12.2498 7.13824 12.2498C4.16674 12.2498 1.75024 9.89482 1.75024 6.99982C1.75024 4.10557 4.16674 1.74982 7.13824 1.74982C8.43424 1.74982 9.65674 2.20132 10.622 3.00232L8.99749 2.73457C8.58499 2.65957 8.20249 2.94382 8.13499 3.35182C8.06749 3.76057 8.34424 4.14682 8.75299 4.21357L11.9375 4.74007C11.9787 4.74682 12.0207 4.74982 12.0605 4.74982C12.1497 4.74982 12.2367 4.73407 12.3177 4.70407C12.3455 4.69357 12.368 4.67407 12.395 4.65982C12.4445 4.63432 12.4962 4.61182 12.539 4.57582C12.566 4.55407 12.5832 4.52257 12.6065 4.49707C12.6417 4.46032 12.6792 4.42507 12.7055 4.38007C12.7242 4.34782 12.7317 4.30957 12.746 4.27357C12.764 4.22932 12.788 4.18807 12.797 4.13932L13.3625 1.13932C13.439 0.732067 13.1712 0.339067 12.764 0.263317C12.3582 0.189817 11.9645 0.454567 11.888 0.861067L11.684 1.94182C10.436 0.861067 8.83624 0.249817 7.13824 0.249817C3.34024 0.249817 0.250244 3.27757 0.250244 6.99982C0.250244 10.7221 3.34024 13.7498 7.13824 13.7498C10.1697 13.7498 12.8127 11.8456 13.715 9.01132C13.8402 8.61682 13.622 8.19532 13.2275 8.06932Z" stroke="none"/>
+            </svg>
+        </a>
+    </div>
+    <button class="all-inventory__close all-inventory__trigger"></button>
+</div>

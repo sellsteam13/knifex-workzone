@@ -1,0 +1,60 @@
+.lucker {
+    padding: 30px;
+    margin-bottom: $gap;
+    background: #16163A;
+    border-radius: $bradius;
+    @media (max-width: 650px) {
+        display: none;
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: rem(16);
+        color: $white;
+    }
+    &-inner {
+        display: flex;
+        align-items: center;
+        &-avatar {
+            position: relative;
+            margin: 0 20px 0 10px;
+            flex-shrink: 0;
+            &__lvl {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+                font-size: rem(12);
+            }
+            &__holder {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__username {
+            font-size: rem(16);
+            color: $white;
+            @include hover();
+        }
+        &__summ {
+            margin-right: 20px;
+            font-size: rem(14);
+        }
+        &__chance {
+            font-size: rem(14);
+            color: $tblue;
+        }
+    }
+}

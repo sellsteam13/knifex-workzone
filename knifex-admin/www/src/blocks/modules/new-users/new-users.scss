@@ -1,0 +1,80 @@
+.new-users {
+    &-inner {
+        &-top {
+            display: flex;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &-illstr {
+            display: flex;
+            align-items: flex-start;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 0 5px;
+            &__item {
+                width: 100px;
+                flex-shrink: 0;
+                &:first-child .new-users-inner-illstr__item-state {
+                    &:before {
+                        display: block;
+                    }
+                }
+                &-state {
+                    height: 120px;
+                    position: relative;
+                    width: 50px;
+                    margin: 0 auto;
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: -20px;
+                        bottom: 0;
+                        width: 1px;
+                        background-color: rgba(255, 255, 255, 0.06);
+                    }
+                    &:before {
+                        right: calc(100% + 24px);
+                        display: none;
+                    }
+                    &:after {
+                        left: calc(100% + 24px);
+                    }
+                    span {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        min-height: 2px;
+                        background: linear-gradient(180deg, rgba(#8F46FF, .5) 0%, rgba(22, 22, 58, 0) 100%);
+                        border-top: 2px solid #8F46FF;
+                    }
+                }
+                >span {
+                    display: block;
+                    text-align: center;
+                    font-size: rem(13);
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    &__count {
+        &-num {
+            font-size: rem(24);
+            line-height: 117%;
+            color: $white;
+            margin-bottom: 8px;
+        }
+        &-text {
+            font-size: rem(14);
+            line-height: lh(16, 14);
+        }
+    }
+    &-sort {
+        flex-shrink: 0;
+        margin-left: $gap;
+    }
+}

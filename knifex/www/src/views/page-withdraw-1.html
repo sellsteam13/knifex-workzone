@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar.html")
+
+        <!-- main content -->
+        <main class="main">
+
+            <div class="default-container limiter">
+
+                <div class="withdraw-container">
+
+                    <!-- withdraw heading -->
+                    @@include("../blocks/modules/withdraw/withdraw-heading.html")
+
+                    <!-- withdraw latest -->
+                    @@include("../blocks/modules/withdraw/withdraw-latest.html")
+
+                    <!-- withdraw inventory -->
+                    @@include("../blocks/modules/withdraw/withdraw-inventory.html")
+
+                    <!-- withdraw checked -->
+                    @@include("../blocks/modules/withdraw/withdraw-checked.html")
+
+                    <!-- withdraw skins -->
+                    @@include("../blocks/modules/withdraw/withdraw-skins.html")
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

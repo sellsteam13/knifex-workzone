@@ -1,0 +1,112 @@
+<div class="game-check">
+    <div class="game-check-widget">
+        <div class="input-label game-check-widget__input-label">Игра</div>
+        <div class="select-wrapper game-check-widget__input">
+            <select>
+                <option>
+                    Crash
+                </option>
+                <option>
+                    Wheel
+                </option>
+                <option>
+                    Classic
+                </option>
+                <option>
+                    Battle
+                </option>
+                <option>
+                    Clash
+                </option>
+                <option>
+                    Mines
+                </option>
+            </select>
+        </div>
+        <div class="input-label game-check-widget__input-label">Client Seed</div>
+        <input type="text" class="game-check-widget__input">
+        <div class="input-label game-check-widget__input-label">Server Seed</div>
+        <input type="text" class="game-check-widget__input">
+        <div class="input-label game-check-widget__input-label">Nonce</div>
+        <div class="input-module-with-btns is-counter game-check-widget__input">
+            <input type="text" value="0">
+            <div class="input-module-with-btns__holder">
+                <button class="def-btn def-btn--blue is-counter__decr">&ndash;</button>
+                <button class="def-btn def-btn--blue is-counter__incr">+</button>
+            </div>
+        </div>
+        <div class="game-check-widget__holder">
+            <img src="./assets/img/pics/crash-game-check.png" alt="game crash check">
+        </div>
+    </div>
+    <div class="game-check-seeds">
+        <div class="game-check-seeds__title">Сиды в байты</div>
+        <div class="game-check-seeds__subtitle">HMAC_SHA512(server_seed, client_seed:nonce:0):</div>
+        <div class="game-check-seeds-outer has-styled-scrollbar has-styled-scrollbar--horizontal">
+            <div class="game-check-seeds__inner">
+                50 56 ed d2 5c a6 2f 08 e5 9b b9 7c 1e c4 bf 5c 59 77 a9 9d 30 1d f1 ff 5c e8 49 4a de 93 3e 1a d3 ad ba 68 07 f8 d8 02 2f 42 c1 62 80 73 0b 4a 50 12 e1 4a 8a3c e1 84 2f b9 58 44 15 43 66 09 80 86 237 210 92 166 47 8 229 155 185 124 30 196 191 92 89 119
+                169 157 48 29 241 255 92 232 73 74 222 147 62 26 211 173 86 104 7 248 216 2 47 66 193 98 128 115 11 74 80 18 225 74 138 60 225 132 47 185 88 68 21 67 102 9 80 86 237 210 92 166 47 8 229 155 185 124 30 196 191925 89 119 169 157 48 29 241
+                255 92 232 73 74 222 147 62 26 211 173 186 104 7 248 216 2 47 66 193 98 128 115 11 74 80 18 225 74 138 60 225 132 47 185 88 50 56 ed d2 5c a6 2f 08 e5 9b b9 7c 1e c4 bf 5c 59 77 a9 9d 30 1d f1 ff 5c e8 49 4a de 93 3e 1a d3 ad ba 68 07
+                f8 d8 02 2f 42 c1 62 80 73 0b 4a 50 12 e1 4a 8a3c e1 84 2f b9 58 44 15 43 66 09 80 86 237 210 92 166 47 8 229 155 185 124 30 196 191 92 89 119 169 157 48 29 241 255 92 232 73 74 222 147 62 26 211 173 86 104 7 248 216 2 47 66 193 98 128
+                115 11 74 80 18 225 74 138 60 225 132 47 185 88 68 21 67 102 9 80 86 237 210 92 166 47 8 229 155 185 124 30 196 191925 89 119 169 157 48 29 241 255 92 232 73 74 222 147 62 26 211 173 186 104 7 248 216 2 47 66 193 98 128 115 11 74 80 18
+                225 74 138 60 225 132 47 185 88
+            </div>
+        </div>
+    </div>
+    <div class="game-check-table">
+        <div class="game-check-table__title">Перемешивание чисел</div>
+        <div class="game-check-table-outer">
+            <div class="table game-check-table-inner wpn-table">
+                <div class="t-head">
+                    <div class="t-row">
+                        <div class="t-item">
+                            #
+                        </div>
+                        <div class="t-item">
+                            NuMBER
+                        </div>
+                        <div class="t-item">
+                            Multiplier
+                        </div>
+                        <div class="t-item">
+                            Number * Multiplier
+                        </div>
+                        <div class="t-item">
+                            Result
+                        </div>
+                    </div>
+                </div>
+                <div class="t-body">
+                    <div class="t-row">
+                        <div class="t-item"><span>1</span></div>
+                        <div class="t-item"><span>0.313826431138885864	</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>NaN</span></div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-item"><span>1</span></div>
+                        <div class="t-item"><span>0.313826431138885864	</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>NaN</span></div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-item"><span>1</span></div>
+                        <div class="t-item"><span>0.313826431138885864	</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>NaN</span></div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-item"><span>1</span></div>
+                        <div class="t-item"><span>0.313826431138885864	</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>7</span></div>
+                        <div class="t-item"><span>NaN</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

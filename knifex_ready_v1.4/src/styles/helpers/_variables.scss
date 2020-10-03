@@ -1,0 +1,29 @@
+/** colors **/
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --text-blue: #868EBE;
+    --btn-green-gradient: linear-gradient(93.39deg, #3D8F69 0%, #367B7D 100%);
+    --btn-accent-gradient: linear-gradient(98.34deg, #8F46FF 0%, #0076FE 100%), #3B498B;
+    --border: #262649;
+    --layout: rgba(12, 12, 48, 0.6);
+    --border-radius: 1rem;
+    --transition-speed: .275s;
+    --transition-timing-function: ease;
+    --link: #278CFF;
+    --basic-gap: 30px;
+}
+
+// scss vars
+$white: var(--white);
+$black: var(--black);
+$tblue: var(--text-blue);
+$gbtn: var(--btn-green-gradient);
+$abtn: var(--btn-accent-gradient);
+$border: var(--border);
+$layout: var(--layout);
+$bradius: var(--border-radius);
+$trans: var(--transition-speed) var(--transition-timing-function);
+$link: var(--link);
+$gap: var(--basic-gap);

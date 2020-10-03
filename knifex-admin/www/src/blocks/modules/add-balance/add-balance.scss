@@ -1,0 +1,14 @@
+.add-balance {
+    &__users {
+        margin-bottom: 15px;
+        textarea {
+            min-height: 145px;
+        }
+    }
+    &__amount {
+        margin-bottom: $gap;
+    }
+    &__submit {
+        padding: 0 36px;
+    }
+}

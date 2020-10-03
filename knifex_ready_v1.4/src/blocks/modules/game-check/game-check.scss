@@ -1,0 +1,117 @@
+.game-check {
+    padding: 30px;
+    margin-bottom: $gap;
+    background: #16163A;
+    border-radius: $bradius;
+    @media (max-width: 1170px) {
+        padding: 20px;
+    }
+    &-widget {
+        margin: 0 auto 30px;
+        max-width: 100%;
+        width: 720px;
+        background: linear-gradient(0deg, #1C1C40, #1C1C40), #16163A;
+        border-radius: $bradius;
+        padding: 30px;
+        @media (max-width: 1170px) {
+            padding: 10px;
+        }
+        &__input-label {
+            margin-bottom: 12px;
+        }
+        &__input {
+            margin-bottom: 20px;
+            &.is-counter {
+                .def-btn {
+                    font-size: rem(16);
+                    padding: 0 13px;
+                    color: $white;
+                }
+            }
+        }
+        &__holder {
+            margin-top: 40px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #262649;
+            border-radius: $bradius;
+            @media (max-width: 1170px) {
+                padding: 10px;
+                margin-top: 20px;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        input,
+        select {
+            height: 46px;
+        }
+    }
+    &-seeds {
+        margin-bottom: 30px;
+        &__title {
+            font-size: rem(16);
+            color: $white;
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            margin-bottom: 15px;
+            font-size: rem(13);
+            line-height: lh(16, 13);
+            color: #E5A802;
+        }
+        &-outer {
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+            padding-bottom: 7px;
+        }
+        &__inner {
+            width: 250%;
+            font-size: rem(13);
+            line-height: lh(16, 13);
+            letter-spacing: 0.2em;
+            color: #969DCD;
+        }
+    }
+    &-table {
+        @media (max-width: 650px) {
+            display: none;
+        }
+        &__title {
+            margin-bottom: 25px;
+            font-size: rem(16);
+            color: $white;
+        }
+        &-inner {
+            .t-item {
+                &:nth-child(1) {
+                    width: cw(85, 1320);
+                    padding-left: 30px;
+                }
+                &:nth-child(2) {
+                    width: cw(325, 1320);
+                }
+                &:nth-child(3) {
+                    width: cw(265, 1320);
+                }
+                &:nth-child(4) {
+                    width: cw(329, 1320);
+                }
+                &:nth-child(5) {
+                    width: cw(316, 1320);
+                    padding-right: 30px;
+                }
+            }
+            .t-body .t-row {
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            .t-head {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

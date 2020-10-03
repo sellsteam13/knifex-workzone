@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="page-layout">
+
+        <!-- navigation -->
+        @@include("../blocks/modules/nav/nav.html")
+
+        <!-- main content -->
+        <main class="page-layout-main main">
+
+            <div class="limiter">
+
+                <!-- title -->
+                @@include("../blocks/modules/heading/heading-admin.html")
+
+                <div class="pages-list">
+                    <style>
+                        a.def-link {
+                            margin-bottom: 20px;
+                            font-size: 20px;
+                            display: block;
+                        }
+                    </style>
+                    <a class="def-link" href="./page-stats.html">1. Stats</a>
+                    <a class="def-link" href="./page-add-balance.html">2. Balance</a>
+                    <a class="def-link" href="./page-promocodes.html">3. Promo</a>
+                    <a class="def-link" href="./page-block-payments.html">4. Block payments</a>
+                    <a class="def-link" href="./page-block-users.html">5. Block users</a>
+                    <a class="def-link" href="./page-output.html">6. Payment system</a>
+                    <a class="def-link" href="./page-cases.html">7. Cases list</a>
+                    <a class="def-link" href="./page-cases-modal.html">8. Cases list - Edit</a>
+                    <a class="def-link" href="./page-case.html">9. Cases list - Skins inside</a>
+                    <a class="def-link" href="./page-case-modal.html">10. Cases list - Skins inside - Edit</a>
+                </div>
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+    <!-- modals module -->
+    @@include("../blocks/modules/modals/modals.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

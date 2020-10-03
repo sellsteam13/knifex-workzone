@@ -1,0 +1,40 @@
+.heading {
+    padding: 20px 30px;
+    background: #111135;
+    border-radius: $bradius;
+    display: flex;
+    align-items: center;
+    margin-bottom: $gap;
+    @media (max-width: 1170px) {
+        padding: 20px;
+    }
+    @media (max-width: 450px) {
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-weight: normal;
+        font-style: normal;
+        font-size: rem(16);
+        color: $white;
+        padding-right: 10px;
+        @media (max-width: 450px) {
+            text-align: center;
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &__btn {
+        padding: 0 20px;
+        margin-right: 10px;
+        @media (max-width: 450px) {
+            padding: 0;
+            width: 100%;
+            margin-right: 0;
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

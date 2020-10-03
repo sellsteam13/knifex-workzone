@@ -1,0 +1,99 @@
+/** styles for default btns **/
+
+.def-btn {
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(14);
+    line-height: lh(16, 14);
+    border-radius: $bradius;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.is-disabled {
+        filter: brightness(.6) !important;
+        pointer-events: none !important;
+        transition: filter $trans;
+    }
+    >span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &--big {
+        height: 46px;
+        font-size: rem(16);
+    }
+    &--rounded {
+        border-radius: 50%;
+        width: 36px;
+    }
+    &--accent {
+        background: $abtn;
+        color: $white;
+        @include hover();
+    }
+    &--transparent {
+        border: 1px solid #2F2F53;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: $tblue;
+        transition: border-color $trans, color $trans;
+        svg {
+            fill: $tblue;
+            stroke: $tblue;
+            margin-right: 10px;
+            transition: fill $trans, stroke $trans;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &:hover {
+            color: $white;
+            border-color: $white;
+            transition: border-color $trans, color $trans;
+            svg {
+                fill: $white;
+                stroke: $white;
+                transition: fill $trans, stroke $trans;
+            }
+        }
+    }
+    &--green {
+        background: $gbtn;
+        color: $white;
+        @include hover();
+    }
+    &--blue {
+        background: #262649;
+        color: $tblue;
+        @include hover();
+        svg {
+            fill: $tblue;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &--dark {
+        background: #2F2F53;
+        color: $white;
+        svg {
+            fill: $tblue;
+            stroke: $tblue;
+        }
+        @include hover();
+    }
+}
+
+
+/** styles for default links **/
+
+.def-link {
+    color: #278CFF;
+    &:hover {
+        text-decoration: underline;
+    }
+}

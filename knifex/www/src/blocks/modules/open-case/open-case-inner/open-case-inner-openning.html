@@ -1,0 +1,61 @@
+<div class="open-case-inner-wrapper limiter">
+    <!-- первый этап -->
+    <div class="open-case-inner__preview">
+        <img src="./assets/img/pics/case/open-case-example.png" alt="example">
+    </div>
+    <a href="#" class="def-btn def-btn--accent def-btn--big open-case-inner__open">Открыть кейс</a>
+    <div class="open-case-inner__cases-count">
+        <label class="open-case-inner__cases-count-item">
+            <input type="radio" hidden name="casesCountTabsGroup" checked>
+            <span>1</span>
+        </label>
+        <label class="open-case-inner__cases-count-item">
+            <input type="radio" hidden name="casesCountTabsGroup">
+            <span>2</span>
+        </label>
+        <label class="open-case-inner__cases-count-item">
+            <input type="radio" hidden name="casesCountTabsGroup">
+            <span>3</span>
+        </label>
+        <label class="open-case-inner__cases-count-item">
+            <input type="radio" hidden name="casesCountTabsGroup">
+            <span>4</span>
+        </label>
+    </div>
+    <!-- второй этап -->
+    <div class="open-case-inner-group is-visible">
+        <div class="open-case-inner-group__title">Групповая игра</div>
+        <div class="open-case-inner-group__round">Раунд 2 / 2</div>
+    </div>
+    <div class="open-case-inner-track is-visible">
+        <div class="open-case-inner-track-wrap">
+            <div class="open-case-inner-track-holder">
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+                <!-- rare card -->
+                @@include("../../card/card-for-case.html")
+            </div>
+        </div>
+        <div class="open-case-inner-track__pointer">
+            <img src="./assets/img/svg/case-open/pointer.svg" alt="\/">
+            <img src="./assets/img/svg/case-open/pointer.svg" alt="/\">
+        </div>
+    </div>
+    <div class="open-case-inner__state is-visible">
+        Открываем кейс...
+    </div>
+</div>

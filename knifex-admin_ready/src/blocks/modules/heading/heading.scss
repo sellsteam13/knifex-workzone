@@ -1,0 +1,46 @@
+.heading {
+    padding: 0 30px;
+    background: #111135;
+    border-radius: $bradius;
+    display: flex;
+    align-items: center;
+    margin-bottom: $gap;
+    height: 70px;
+    @media (max-width: 1170px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 450px) {
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-weight: normal;
+        font-style: normal;
+        font-size: rem(16);
+        color: $white;
+        padding-right: 10px;
+        @media (max-width: 450px) {
+            text-align: center;
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    &__search {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: 12px;
+            top: 10px;
+            background: url('../img/icons/search-icon.svg') no-repeat center;
+            background-size: 100% 100%;
+        }
+        input {
+            padding-right: 40px;
+            width: 185px;
+            text-overflow: ellipsis;
+        }
+    }
+}

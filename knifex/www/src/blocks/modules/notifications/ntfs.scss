@@ -1,0 +1,94 @@
+.ntfs {
+    &-outer {
+        margin-bottom: $gap;
+        padding: 0 20px 0 42px;
+        @media (max-width: 1170px) {
+            order: -1;
+            padding: 0 0 0 18px;
+        }
+        @media (max-width: 1170px) {
+            padding: 0;
+        }
+    }
+    &-inner {
+        position: relative;
+        padding: 23px 30px 23px 36px;
+        background: #252549;
+        border-radius: $bradius;
+        @media (max-width: 1170px) {
+            padding: 20px;
+        }
+        &__close {
+            background: #373F6E;
+            @include hover();
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @media (max-width: 1170px) {
+                right: 0;
+                top: 0;
+                left: auto;
+                transform: translate(30%, -50%) scale(.8);
+            }
+        }
+        &-list {
+            &__item {
+                margin-bottom: 10px;
+                font-size: rem(12);
+                line-height: lh(14, 12);
+                color: $tblue;
+                padding-left: 21px;
+                position: relative;
+                &-title {
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 5px;
+                        transform: translateY(3px);
+                        fill: $tblue;
+                        position: absolute;
+                        top: -4px;
+                        left: 0;
+                    }
+                }
+                span {
+                    margin-right: 3px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.is-purple {
+                    .ntfs-inner-list__item-title {
+                        svg {
+                            fill: #BD79FF;
+                        }
+                        span {
+                            color: #BD79FF;
+                        }
+                    }
+                }
+                &.is-blue {
+                    .ntfs-inner-list__item-title {
+                        svg {
+                            fill: #2CDDB3;
+                        }
+                        span {
+                            color: #2CDDB3;
+                        }
+                    }
+                }
+                &.is-red {
+                    .ntfs-inner-list__item-title {
+                        svg {
+                            fill: #FF7676;
+                        }
+                        span {
+                            color: #FF7676;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+<section class="game">
+    <div class="game-heading">
+        <div class="game-heading__name game-heading__wheel">
+            <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                <circle r="4" transform="matrix(-1 8.74228e-08 8.74228e-08 1 11.5 11.9999)" fill="none" stroke-width="2"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7499 2.61158C16.0357 2.28924 16.5026 2.19123 16.8782 2.40214C20.2332 4.28614 22.5 7.87833 22.5 12C22.5 18.0751 17.5751 23 11.5 23C5.42487 23 0.500001 18.0751 0.500001 12C0.5 7.87737 2.7679 4.28447 6.12415 2.40082C6.4997 2.19005 6.96652 2.28809 7.25218 2.61036C7.69592 3.11096 7.50757 3.90398 6.93149 4.24404C4.27921 5.8097 2.5 8.69705 2.5 12C2.5 16.9705 6.52944 21 11.5 21C16.4706 21 20.5 16.9705 20.5 12C20.5 8.69783 18.7216 5.81105 16.0704 4.24514C15.4945 3.90499 15.3063 3.11211 15.7499 2.61158Z" stroke="none"/>
+                <path d="M14.1755 -6.10068e-05L12.3652 -6.08485e-05L10.636 -6.06974e-05L8.82572 -6.05391e-05C8.53661 -6.05138e-05 8.39071 0.419367 8.59605 0.666471L11.2709 3.88533C11.3979 4.03814 11.6033 4.03814 11.7303 3.88533L14.4051 0.66647C14.6078 0.419366 14.4646 -6.10321e-05 14.1755 -6.10068e-05Z" stroke="none"/>
+            </svg>
+            <span>Wheel</span>
+        </div>
+        <div class="game-heading__number">
+            — #678631
+        </div>
+        <a href="#" class="def-btn def-btn--green game-heading__how game-heading__moved-to-right">
+            Как играть?
+        </a>
+        <a href="#" class="def-btn def-btn--transparent game-heading__check-if-true">
+            Проверка честности
+        </a>
+        <button class="def-btn def-btn--transparent game-heading__volume">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.750525V11.2494C8 11.9193 7.18928 12.2493 6.71966 11.7797L3.93934 8.99999H0.75C0.335781 8.99999 0 8.66421 0 8.24999V3.74999C0 3.33577 0.335781 2.99999 0.75 2.99999H3.93934L6.71969 0.220181C7.18875 -0.248881 8 0.079869 8 0.750525ZM12 5.99999C12 4.94633 11.4629 3.98905 10.5634 3.43924C10.0922 3.1513 9.47666 3.29977 9.18863 3.77099C8.90059 4.24221 9.04912 4.85771 9.52034 5.14574C9.82072 5.3293 10 5.64865 10 5.99999C9.9999 6.16179 9.96062 6.32115 9.88551 6.46445C9.81039 6.60775 9.70169 6.73073 9.56869 6.82286C9.11481 7.13752 9.00194 7.76055 9.31659 8.21443C9.63128 8.66833 10.2543 8.78117 10.7082 8.46652C11.5171 7.90571 12 6.98368 12 5.99999Z"/>
+            </svg>
+            <span>Звук</span>
+        </button>
+    </div>
+    <div class="game-body">
+        <div class="game-body-column-left wheel-manage">
+            <div class="wheel-manage-tabs">
+                <label class="wheel-manage-tabs__item">
+                    <input type="radio" hidden name="wheelTabsGroup" checked>
+                    <span>3x</span>
+                </label>
+                <label class="wheel-manage-tabs__item">
+                    <input type="radio" hidden name="wheelTabsGroup">
+                    <span>5x</span>
+                </label>
+                <label class="wheel-manage-tabs__item">
+                    <input type="radio" hidden name="wheelTabsGroup">
+                    <span>10x</span>
+                </label>
+                <label class="wheel-manage-tabs__item">
+                    <input type="radio" hidden name="wheelTabsGroup">
+                    <span>50x</span>
+                </label>
+            </div>
+            <a href="#" class="def-btn def-btn--big def-btn--accent wheel-manage__submit">Сделать ставку</a>
+            <div class="game-body__win-chance">
+                <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.84559 2.84515C3.49636 2.19436 3.49636 1.13888 2.84559 0.488092C2.19481 -0.162697 1.13935 -0.162697 0.488571 0.488092C-0.162206 1.13888 -0.162206 2.19436 0.488571 2.84515C1.13961 3.4962 2.19481 3.4962 2.84559 2.84515ZM9.51221 7.15485C8.86143 6.50406 7.80597 6.50406 7.15519 7.15485C6.50442 7.80564 6.50442 8.86112 7.15519 9.51191C7.80597 10.1627 8.86143 10.1627 9.51221 9.51191C10.1632 8.86112 10.1632 7.8059 9.51221 7.15485ZM9.46169 1.12794L8.87263 0.538874C8.54711 0.213349 8.01951 0.213349 7.69425 0.538874L0.539352 7.69392C0.213833 8.01944 0.213833 8.54705 0.539352 8.87232L1.12841 9.46139C1.45393 9.78691 1.98153 9.78691 2.30679 9.46139L9.46169 2.30635C9.78721 1.98108 9.78721 1.45347 9.46169 1.12794Z"/>
+                </svg>
+                <span>49,5% шанс</span>
+            </div>
+            <div class="game-manage-bets">
+                <div class="game-manage-bets__title">Ваша ставка:</div>
+                <div class="game-manage-bets-list">
+                    <div class="game-manage-bets-list__item">
+                        <span class="is-colored-red">
+                            Красный 5x
+                        </span>— 725,06$
+                    </div>
+                    <div class="game-manage-bets-list__item">
+                        <span class="is-colored-green">
+                            Зеленый 50x
+                        </span>— 725,06$
+                    </div>
+                    <div class="game-manage-bets-list__item">
+                        <span class="is-colored-blue">
+                            Синий 10x
+                        </span>— 725,06$
+                    </div>
+                    <div class="game-manage-bets-list__item">
+                        <span class="is-colored-dark">
+                            Темный 10x
+                        </span>— 725,06$
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="game-body-column-right game-outer game-wheel">
+            <div class="game-wheel-main">
+                <div class="game-wheel-main-inner">
+                    <div class="game-wheel__pointer">
+                        <svg width="20" height="13" viewBox="0 0 20 13" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.94342 0.443611L0.440763 9.00121C-0.146921 9.59269 -0.146921 10.5491 0.440763 11.1343L1.8537 12.5564C2.44139 13.1479 3.39169 13.1479 3.97312 12.5564L10 6.49056L16.0269 12.5564C16.6146 13.1479 17.5649 13.1479 18.1463 12.5564L19.5592 11.1343C20.1469 10.5428 20.1469 9.5864 19.5592 9.00121L11.0566 0.443611C10.4814 -0.14787 9.5311 -0.14787 8.94342 0.443611Z"/>
+                        </svg>
+                    </div>
+                    <div class="game-wheel-timer">
+                        <img src="./assets/img/svg/wheel-game/wheel-timer.svg" alt="wheel timer icon">
+                        <div class="game-wheel-timer__inner">
+                            <span>30</span>сек
+                        </div>
+                    </div>
+                    <div class="game-wheel-result">
+                        <div class="game-wheel-result-inner">
+                            <div class="game-wheel-result__title">Выигрыш</div>
+                            <div class="game-wheel-result__content">$ 1,064.73</div>
+                        </div>
+                    </div>
+                    <div class="game-wheel__figure"></div>
+                </div>
+            </div>
+            <div class="game-wheel-history">
+                <div class="game-wheel-history-inner">
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                    <div class="game-wheel-history__item is-bg-green"></div>
+                    <div class="game-wheel-history__item is-bg-blue"></div>
+                    <div class="game-wheel-history__item is-bg-red"></div>
+                    <div class="game-wheel-history__item is-bg-dark"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

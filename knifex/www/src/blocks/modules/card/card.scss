@@ -1,0 +1,550 @@
+.card {
+    flex-shrink: 0;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    background: linear-gradient(180deg, #1B1B3F 0%, rgba(27, 27, 63, 0) 100%);
+    &.is-acepted {
+        background: linear-gradient(0deg, #262649, #262649), linear-gradient(180deg, #1B1B3F 0%, rgba(27, 27, 63, 0) 100%);
+    }
+    &:before {
+        content: '';
+        display: block;
+        padding-bottom: cw(133, 95);
+    }
+    &-popup {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+        background-color: rgba(12, 12, 48, 0.8);
+        opacity: 0;
+        transition: opacity $trans;
+        padding: 20px 5px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        &-title {
+            font-size: rem(14);
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        &-content {
+            display: flex;
+            max-width: calc(100% - 50px);
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 5px;
+        }
+        &-row {
+            margin-right: 10px;
+            &.is-heading {
+                margin-right: 0px;
+                width: 50px;
+                .card-popup-row__item {
+                    color: #FF9147;
+                }
+            }
+            &__item {
+                font-size: rem(11);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-bottom: 3px;
+            }
+        }
+    }
+    &-pricing {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, .3);
+        opacity: 0;
+        transition: opacity $trans;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FF9147;
+        font-size: 32px;
+        font-weight: 700;
+        span {
+            transform: scale(.4) translateY(10px);
+            transition: transform $trans;
+        }
+    }
+    &:hover {
+        .card {
+            &-popup,
+            &-pricing {
+                opacity: 1;
+                transition: opacity $trans;
+            }
+            &-pricing span {
+                transform: scale(1) translate(0);
+                transition: transform $trans;
+            }
+        }
+    }
+    &.is-stattrak {
+        &:after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: -8px;
+            width: 21%;
+            height: 15%;
+            background: url('../img/icons/icon-stattrak.png') no-repeat center;
+            background-size: 100% 100%;
+            @media (max-width: 1170px) {
+                left: 0;
+            }
+        }
+    }
+    &-remove {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: 3;
+        transform: translate(50%, -50%);
+        background-color: #373F6E;
+        transition: transform $trans;
+        &:hover {
+            transform: translate(50%, -50%) rotate(180deg);
+            transition: transform $trans;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 8px;
+            height: 2px;
+            background-color: $white;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    &-info {
+        &__price {
+            position: absolute;
+            z-index: 1;
+            left: 12px;
+            right: 12px;
+            top: 10px;
+            font-size: rem(12);
+            text-align: center;
+            color: $tblue;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &__naming {
+            position: absolute;
+            z-index: 1;
+            bottom: cw(12, 133);
+            left: 5px;
+            right: 5px;
+            &-weapon {
+                text-align: center;
+                max-width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: rem(12);
+                color: $white;
+                margin-bottom: 3px;
+            }
+            &-skin {
+                font-weight: 500;
+                font-size: rem(10);
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: $white;
+            }
+            &-quality {
+                font-size: rem(12);
+                font-weight: 500;
+                text-shadow: 1px 0px 0px rgba(0, 0, 0, .3);
+                margin-bottom: 3px;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            &-chance {
+                font-size: rem(14);
+                font-weight: 500;
+                text-align: center;
+                margin: 5px 0 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-height: 16px;
+            }
+        }
+        &__coeff {
+            position: absolute;
+            left: 50%;
+            top: 9%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: rem(12);
+            text-align: center;
+            color: $white;
+        }
+        &-top {
+            position: absolute;
+            z-index: 1;
+            top: 12px;
+            right: 10px;
+            left: 10px;
+            &-row {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 7px;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #303053;
+                font-size: rem(12);
+                font-weight: 500;
+                white-space: nowrap;
+                @media (max-width: 1170px) {
+                    font-size: rem(10);
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                &--highlighted {
+                    color: #FF9147;
+                }
+            }
+        }
+        &__btn {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            padding: 0 16px;
+        }
+        &__trade-url {
+            position: absolute;
+            z-index: 2;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 63px;
+            color: #4DB283;
+            text-decoration: underline;
+            font-size: rem(12);
+            &:hover {
+                color: $tblue;
+            }
+        }
+    }
+    &-skin {
+        position: absolute;
+        z-index: 1;
+        top: 24%;
+        left: 12px;
+        right: 13px;
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: cw(52, 70);
+        }
+        img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            &.is-knife {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    &-bg {
+        &:after {
+            content: '';
+            position: absolute;
+            top: cw(32, 133);
+            left: 50%;
+            transform: translateX(-50%);
+            width: cw(50, 95);
+            height: cw(55, 133);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            height: cw(67, 133);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+    }
+    &.is-checked {
+        background: linear-gradient(0deg, #262649, #262649), linear-gradient(180deg, #1B1B3F 0%, rgba(27, 27, 63, 0) 100%);
+        .card-info {
+            &:after {
+                content: '';
+                position: absolute;
+                width: 16.66%;
+                height: 12%;
+                border-radius: 50%;
+                top: -7px;
+                right: -7px;
+                background: url('../img/icons/icon-rounded-check.svg') no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    &-amount {
+        position: absolute;
+        z-index: 1;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #020226;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: rem(14);
+        color: $white;
+    }
+    &-remove-back {
+        background: #262649;
+        border: 1px dashed $tblue !important;
+        &-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            background-color: #16163A;
+            @media (max-width: 1170px) {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 10px;
+            }
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        &:hover {
+            .card-remove-back__text {
+                text-decoration: underline;
+                text-decoration-skip: none;
+            }
+        }
+        &__text {
+            font-size: rem(12);
+        }
+        >* {
+            &:not(.card-remove-back-container) {
+                display: none;
+            }
+        }
+    }
+}
+
+// skins quality
+.card.is-common {
+    border-color: rgba(200, 200, 200, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-common.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(200, 200, 200, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(200, 200, 200, 0.5);
+    }
+}
+
+.card.is-ancient {
+    border-color: rgba(220, 20, 60, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-ancient.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(220, 20, 60, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(220, 20, 60, 0.5);
+    }
+}
+
+.card.is-gold {
+    border-color: rgba(219, 219, 22, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-gold.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(219, 219, 22, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(219, 219, 22, 0.5);
+    }
+}
+
+.card.is-legendary {
+    border-color: rgba(199, 21, 133, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-legendary.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(199, 21, 133, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(199, 21, 133, 0.5);
+    }
+}
+
+.card.is-mythical {
+    border-color: rgba(143, 70, 255, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-mythical.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(143, 70, 255, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(143, 70, 255, 0.5);
+    }
+}
+
+.card.is-immortal {
+    border-color: rgba(219, 121, 22, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-orange.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(219, 121, 22, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(219, 121, 22, 0.5);
+    }
+}
+
+.card.is-rare {
+    border-color: rgba(65, 105, 225, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-rare.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(65, 105, 225, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(65, 105, 225, 0.5);
+    }
+}
+
+.card.is-uncommon {
+    border-color: rgba(200, 200, 200, 0.5);
+    .card-bg {
+        &:after {
+            background-image: url('../img/weapon-shadows/shadow-rare.svg');
+        }
+        &:before {
+            background: linear-gradient(180deg, rgba(200, 200, 200, 0.25) 0%, rgba(27, 27, 63, 0) 100%);
+        }
+    }
+    .card-info__naming-quality {
+        color: rgba(200, 200, 200, 0.5);
+    }
+}
+
+// card withdrawal
+.card-withdrawal {
+    &:before {
+        padding-bottom: calc(130px + 57%);
+    }
+    .card {
+        &-bg {
+            &:after {
+                display: none;
+            }
+        }
+        &-skin {
+            top: 75px;
+            width: 70%;
+            max-width: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                height: unset;
+            }
+            @media (min-width: 1651px) {
+                top: 75px;
+                width: 81px;
+                height: 60px;
+            }
+        }
+        &-info {
+            &__naming {
+                bottom: 17px;
+                &-skin {
+                    font-size: rem(10);
+                }
+            }
+        }
+        &-amount {
+            left: 20px;
+        }
+    }
+}

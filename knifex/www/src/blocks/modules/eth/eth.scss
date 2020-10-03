@@ -1,0 +1,318 @@
+.eth-module {
+    border-radius: $bradius;
+    background: #16163A;
+    padding: 0 30px 30px;
+    margin-bottom: $gap;
+    @media (max-width: 1170px) {
+        padding: 0 20px 20px;
+    }
+    &-out {
+        @media (max-width: 650px) {
+            padding: 0 10px 20px;
+            .eth-module-heading {
+                padding: 20px 10px;
+                margin: 0 -10px;
+            }
+        }
+    }
+    &-heading {
+        padding: 28px 30px;
+        margin: 0 -30px;
+        border-bottom: 1px solid $border;
+        font-size: rem(14);
+        color: $white;
+        @media (max-width: 1170px) {
+            padding: 20px;
+            margin: 0 -20px;
+        }
+    }
+}
+
+// eth address
+.eth-address {
+    &-input {
+        margin-top: 15px;
+        &-holder {
+            position: relative;
+            svg {
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                fill: $white;
+            }
+            input {
+                padding-left: 48px;
+            }
+        }
+        &__btn {
+            margin-top: 10px;
+            padding: 0 20px;
+            @media (max-width: 450px) {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        &.is-done {
+            input {
+                color: #4DB283;
+            }
+            svg {
+                fill: #4DB283;
+            }
+        }
+    }
+}
+
+// eth out
+.eth-out {
+    &-table {
+        margin: 30px 0 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #1D2450;
+        @media (max-width: 650px) {
+            margin: 20px 0 20px;
+            padding-bottom: 20px;
+        }
+        .t-item {
+            @media (max-width: 650px) {
+                padding-right: 0;
+            }
+            &:nth-child(1) {
+                width: cw(120, 620);
+                padding-left: 30px;
+                @media (max-width: 650px) {
+                    padding-left: 5px;
+                    width: auto;
+                }
+            }
+            &:nth-child(2) {
+                width: cw(172, 620);
+                @media (max-width: 650px) {
+                    width: auto;
+                    padding-right: 5px;
+                    justify-content: flex-end;
+                }
+            }
+            &:nth-child(3) {
+                width: cw(193, 620);
+                @media (max-width: 650px) {
+                    width: auto;
+                    padding-left: 5px;
+                }
+            }
+            &:nth-child(4) {
+                width: cw(135, 620);
+                padding-right: 30px;
+                @media (max-width: 650px) {
+                    padding-right: 5px;
+                    width: auto;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        .t-head {
+            margin-bottom: 25px;
+            @media (max-width: 650px) {
+                margin-bottom: 10px;
+                .t-row {
+                    .t-item {
+                        &:nth-child(1) {
+                            &:after {
+                                content: '/';
+                                margin: 0 3px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            padding-right: 0;
+                        }
+                        &:nth-child(3) {
+                            margin-left: auto;
+                            padding-left: 0;
+                            &:after {
+                                content: '/';
+                                margin: 0 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .t-body .t-row {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            @media (max-width: 650px) {
+                display: grid;
+                gap: 5px 0;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 1fr 1fr;
+            }
+            &:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-note {
+        margin-bottom: 40px;
+        font-size: rem(14);
+        text-align: center;
+        @media (max-width: 650px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__btn {
+        padding: 0 20px;
+        margin: 0 auto;
+        &-holder {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+// eth table
+.eth-table {
+    margin-bottom: $gap;
+    background-color: #16163A;
+    border-radius: $bradius;
+    &-heading {
+        background: #111135;
+        border-radius: $bradius $bradius 0px 0px;
+        display: flex;
+        align-items: center;
+        padding: 19px 30px;
+        border-bottom: 1px solid $border;
+        @media (max-width: 650px) {
+            padding: 20px;
+        }
+        @media (max-width: 450px) {
+            flex-wrap: wrap;
+        }
+        &__title {
+            font-size: rem(16);
+            color: $white;
+        }
+        &__btn {
+            margin-right: 10px;
+            padding: 0 20px;
+            @media (max-width: 450px) {
+                margin-right: 0;
+                width: 100%;
+                margin-top: 20px;
+                padding: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &-outer {
+        padding: 30px;
+        border-radius: 0 0 $bradius $bradius;
+        @media (max-width: 650px) {
+            padding: 20px;
+        }
+    }
+    &-inner {
+        .t-item {
+            &:nth-child(1) {
+                width: cw(294, 1320);
+                padding-left: 30px;
+                @media (max-width: 650px) {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                width: cw(215, 1320);
+                @media (max-width: 650px) {
+                    width: 128px;
+                    padding-left: 15px;
+                }
+                @media (max-width: 410px) {
+                    display: none;
+                }
+                svg {
+                    fill: $tblue;
+                }
+            }
+            &:nth-child(3) {
+                width: cw(554, 1320);
+                @media (max-width: 650px) {
+                    width: calc(100% - 128px - 43px);
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    svg {
+                        margin: 5px 0px 5px 3px;
+                        transform: rotate(90deg);
+                    }
+                }
+                @media (max-width: 410px) {
+                    width: calc(100% - 43px);
+                    padding-left: 15px;
+                }
+            }
+            &:nth-child(4) {
+                width: cw(257, 1320);
+                padding-right: 30px;
+                @media (max-width: 650px) {
+                    padding-right: 0;
+                    width: 43px;
+                    justify-content: center;
+                }
+            }
+            img,
+            svg {
+                margin: 0 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .t-head {
+            margin-bottom: 28px;
+            padding-right: 25px;
+            @media (max-width: 650px) {
+                margin-bottom: 10px;
+                padding-right: 12px;
+            }
+        }
+        .t-body {
+            max-height: 193px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding-right: 25px;
+            @media (max-width: 650px) {
+                padding-right: 10px;
+            }
+            .t-item {
+                &:nth-child(4) {
+                    @media (max-width: 650px) {
+                        span {
+                            display: none;
+                        }
+                        img {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .t-row {
+                padding-bottom: 28px;
+                margin-bottom: 28px;
+                @media (max-width: 650px) {
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

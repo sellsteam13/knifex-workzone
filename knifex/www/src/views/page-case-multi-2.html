@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar-another.html")
+
+        <!-- main content -->
+        <main class="main">
+            <div class="cases-holder">
+
+                <!-- latest-cases -->
+                @@include("../blocks/modules/cases/latest-cases.html")
+
+                <!-- open-case -->
+                @@include("../blocks/modules/open-case/open-multi-case/multi-case-2.html")
+
+                <!-- latest-cases -->
+                @@include("../blocks/modules/cases/latest-cases.html")
+
+                <!-- case-contaiment -->
+                @@include("../blocks/modules/open-case/open-case-contaiment.html")
+
+            </div>
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

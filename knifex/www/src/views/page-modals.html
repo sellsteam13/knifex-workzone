@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar.html")
+
+        <!-- main content -->
+        <main class="main">
+            <div class="pages-list limiter" style="padding: 30px 0 50px">
+                <h1 style="font-size: 32px; margin-bottom: 40px; color: white;">Список модалок</h1>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-out-method'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">1. Модалка - Вывод скинов (шаг 1)</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-out-trade'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">2. Модалка - Вывод скинов (шаг 2)</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-bonus'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">3. Модалка - Бонус</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-how'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">4. Модалка - Как играть</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-tasks'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">5. Модалка - Бонус задания</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-login'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">6. Модалка - Авторизация на сайте</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-steam'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">7. Модалка - Авторизация через Steam</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-restore'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">8. Модалка - Восстановление доступа</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-promocodes'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">9. Модалка - Промокоды</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-check'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">10. Модалка - Проверка честности</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-set-trade'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">11. Модалка - Добавление Trade URL-Steam</a>
+                <a class="def-link" onclick="openModal(document.querySelector('.modal-set-eth'))" href="#" style="margin-bottom: 20px; font-size: 20px; display: block;">12. Модалка - Добавление ETH-адреса</a>
+            </div>
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- modals module -->
+    @@include("../blocks/modules/modals/modals.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

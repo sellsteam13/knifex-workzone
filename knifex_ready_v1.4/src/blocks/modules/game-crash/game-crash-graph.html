@@ -1,0 +1,73 @@
+<div class="crash-graph">
+    <div class="crash-graph-container">
+    </div>
+    <div class="crash-graph__actual-coeff"></div>
+    <div class="crash-graph__max-coeff">
+        <span class="is-fade-in">4x</span>
+    </div>
+    <div class="crash-graph__timer"></div>
+    <div class="crash-graph__bottom-numbers">
+        <span>0</span>
+        <span>2</span>
+        <span>4</span>
+        <span>6</span>
+        <span>8</span>
+        <span>10</span>
+        <span>12</span>
+        <span>14</span>
+        <span>16</span>
+        <span>18</span>
+    </div>
+    <div class="crash-graph-animation">
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+        <div class="crash-graph-animation__item"></div>
+    </div>
+    <div class="crash-graph-btns">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Вывел все значения сюда для примера. Их можно убрать - они по дефолту в классе прописаны (в т.ч. и градиенты).
+                const testCrash = new Crash('.crash-graph-container', {
+                    strokeWidth: 4, // graphic stroke width
+                    baseFPS: 60, // graphic fps
+                    actuallCoeffsHolderClass: '.crash-graph__actual-coeff', // inserting to html actuall crash coeff
+                    intermediateCoeffHolderClass: '.crash-graph__max-coeff', // inserting to html ceiled crash coeff
+                    baseCoeff: 4, // base divisior
+                    timeHolderClass: '.crash-graph__bottom-numbers', // changing time
+                    backAnimationHolderClass: '.crash-graph-animation', // animation holder
+                    timerHolderClass: '.crash-graph__timer', // timer holder
+                    // gradients
+                    progressGradient: {
+                        firstColor: "rgba(189,121,255,1)",
+                        secondColor: "rgba(46,112,255,0)"
+                    },
+                    finishGradient: {
+                        firstColor: "rgba(211,46,65,.9)",
+                        secondColor: "rgba(211,46,65,0)"
+                    },
+                    strokeGradient: {
+                        firstColor: "rgba(189,121,255,1)",
+                        secondColor: "rgba(46,112,255,1)"
+                    }
+                });
+                // нужно для дебага
+                window.testCrash = testCrash;
+            });
+        </script>
+        <button class="def-btn def-btn--blue" style="padding:  0 10px; margin-right: 4px;" onclick="testCrash.startGrowing()">Запустить от текущего времени</button>
+        <button class="def-btn def-btn--blue" style="padding:  0 10px; margin-right: 4px;" onclick="testCrash.stopGrowing()">Краш</button>
+        <button class="def-btn def-btn--blue" style="padding:  0 10px;" onclick="testCrash.resetGraph()">Обнулить</button>
+        <input id="date" type="datetime-local" step="1" style=" width: 230px; margin: 4px  4px 4px 0; padding-right: 5px;">
+        <button class="def-btn def-btn--blue" style="padding:  0 10px; margin-right: 4px;" onclick="testCrash.startGrowing(new Date(document.querySelector('#date').value))">Запустить по времени</button>
+        <input id="number" type="number" style=" width: 230px; margin: 4px  4px 4px 0; padding-right: 5px;" placeholder="time in ms">
+        <button class="def-btn def-btn--blue" style="padding:  0 10px; margin-right: 4px;" onclick="testCrash.bindTimer(Number.parseFloat(document.querySelector('#number').value))">Запустить таймер</button>
+        <input id="coeff" type="number" style=" width: 230px; margin: 4px  4px 4px 0; padding-right: 5px;" placeholder="coeff (Ex. 2)">
+        <button class="def-btn def-btn--blue" style="padding:  0 10px; margin-right: 4px;" onclick="testCrash.crashOnCoeff(Number.parseInt(document.querySelector('#coeff').value))">Крашнуть на коэф-е</button>
+    </div>
+</div>

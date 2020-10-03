@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <!-- page meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Knifex Вёрстка</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="assets/img/favicons/apple-touch-icon-1024x1024.png">
+
+    <!-- connecting font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+
+    <!-- connecting styles -->
+    <link rel="stylesheet" href="assets/styles/main.min.css">
+
+</head>
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="page-layout">
+
+        <!-- navigation -->
+        <aside class="nav page-layout-nav">
+    <div class="nav-titling">
+        <img src="assets/img/icons/logo-icon.svg" alt="logo-icon">
+        <h1>Knifex Admin Panel</h1>
+    </div>
+    <nav class="nav-inner">
+        <a href="#" class="nav-inner__link is-active">
+            <img src="assets/img/icons/nav-users-icon.svg" alt="nav-icon">
+            <span>Пользователи</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-balances-icon.svg" alt="nav-icon">
+            <span>Балансы</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-promocodes-icon.svg" alt="nav-icon">
+            <span>Промо-коды</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-block-output-icon.svg" alt="nav-icon">
+            <span>Блокировка выводов</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-block-user-icon.svg" alt="nav-icon">
+            <span>Блокировка юзеров</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-output-icon.svg" alt="nav-icon">
+            <span>Система выводов</span>
+        </a>
+        <a href="#" class="nav-inner__link">
+            <img src="assets/img/icons/nav-cases-icon.svg" alt="nav-icon">
+            <span>Список кейсов</span>
+        </a>
+    </nav>
+</aside>
+
+        <!-- main content -->
+        <main class="page-layout-main main">
+
+            <div class="limiter">
+
+                <!-- title -->
+                <section class="heading">
+    <h1 class="heading__title">Панель управления</h1>
+</section>
+
+                <div class="pages-list">
+                    <style>
+                        a.def-link {
+                            margin-bottom: 20px;
+                            font-size: 20px;
+                            display: block;
+                        }
+                    </style>
+                    <a class="def-link" href="./page-stats.html">1. Stats</a>
+                    <a class="def-link" href="./page-add-balance.html">2. Balance</a>
+                    <a class="def-link" href="./page-promocodes.html">3. Promo</a>
+                    <a class="def-link" href="./page-block-payments.html">4. Block payments</a>
+                    <a class="def-link" href="./page-block-users.html">5. Block users</a>
+                    <a class="def-link" href="./page-output.html">6. Payment system</a>
+                    <a class="def-link" href="./page-cases.html">7. Cases list</a>
+                    <a class="def-link" href="./page-cases-modal.html">8. Cases list - Edit</a>
+                    <a class="def-link" href="./page-case.html">9. Cases list - Skins inside</a>
+                    <a class="def-link" href="./page-case-modal.html">10. Cases list - Skins inside - Edit</a>
+                </div>
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+    <!-- modals module -->
+    <div class="overlay">
+    <div class="modal modal-default modal-cases">
+        <div class="modal-default-heading">Редактирование кейсы</div>
+        <button class="modal-close"></button>
+        <div class="modal-default-container">
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Название кейса</div>
+                <div class="input-module__inner">
+                    <input type="text" value="CSGO Prime Case">
+                </div>
+            </div>
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Раздел</div>
+                <div class="input-module__inner">
+                    <div class="select-wrapper">
+                        <select>
+                            <option value="">Популярное</option>
+                            <option value="">Популярное1</option>
+                            <option value="">Популярное2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Стоимость</div>
+                <div class="input-module__inner">
+                    <input type="text" value="12$">
+                </div>
+            </div>
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Изображение</div>
+                <label class="input-module__inner upload-file">
+                    <input type="file" hidden>
+                    <div class="upload-file__img">
+                        <img src="assets/img/pics/case.png" alt="case example">
+                    </div>
+                    <div class="upload-file__name">case image 4.p...</div>
+                    <img src="assets/img/icons/upload-icon.svg" alt="icon-upload" class="upload-file__icon">
+                </label>
+            </div>
+            <a href="#" class="def-btn def-btn--green right-aligned modal-default__submit">Сохранить</a>
+        </div>
+    </div>
+    <div class="modal modal-default modal-case">
+        <div class="modal-default-heading">Редактирование скина</div>
+        <button class="modal-close"></button>
+        <div class="modal-default-container">
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Название скина</div>
+                <div class="input-module__inner">
+                    <input type="text" value="AK-47 | Vulcan">
+                </div>
+            </div>
+            <div class="modal-default__item modal-default__item--halfed">
+                <div class="input-label">Качество</div>
+                <div class="input-module__inner">
+                    <div class="select-wrapper">
+                        <select>
+                            <option value="">FT</option>
+                            <option value="">FN</option>
+                            <option value="">BS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-default__item">
+                <div class="input-label">Стоимость</div>
+                <div class="input-module__inner">
+                    <input type="text" value="150$">
+                </div>
+            </div>
+            <a href="#" class="def-btn def-btn--green right-aligned modal-default__submit">Сохранить</a>
+        </div>
+    </div>
+    <div class="overlay-trigger"></div>
+</div>
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/vendor.min.js"></script>
+
+</body>
+
+</html>

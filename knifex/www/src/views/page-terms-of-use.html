@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar.html")
+
+        <!-- main content -->
+        <main class="main">
+
+            <div class="default-container limiter">
+
+                <!-- terms of use heading -->
+                @@include("../blocks/modules/heading/heading-terms-of-use.html")
+
+                <!-- term of use text module -->
+                @@include("../blocks/modules/text/text-terms-of-use.html")
+
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

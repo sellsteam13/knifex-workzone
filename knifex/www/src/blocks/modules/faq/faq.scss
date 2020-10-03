@@ -1,0 +1,68 @@
+.accordions-holder {
+    margin-bottom: $gap;
+    padding: 30px;
+    background: #16163A;
+    border-radius: $bradius;
+    @media (max-width: 650px) {
+        padding: 20px;
+    }
+    &__title {
+        font-size: rem(16);
+        color: $white;
+        margin-bottom: 30px;
+        @media (max-width: 650px) {
+            margin-bottom: 15px;
+        }
+    }
+    &-list {
+        margin: 0 -10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .ac {
+            margin: 0 10px 30px;
+            @media (max-width: 650px) {
+                margin-bottom: 15px;
+            }
+            &--halfed {
+                width: calc(50% - 20px);
+                margin-bottom: 0;
+                @media (max-width: 1170px) {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// faq connect
+.faq-connect-input {
+    position: relative;
+    svg {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: $white;
+    }
+    input {
+        padding-left: 45px;
+        cursor: pointer;
+        font-size: rem(14);
+        @include hover();
+    }
+    &.is-done {
+        input {
+            color: #4DB283;
+            border-color: #4DB283;
+            pointer-events: none;
+        }
+        svg {
+            fill: #4DB283;
+        }
+    }
+}

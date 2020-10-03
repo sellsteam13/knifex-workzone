@@ -1,0 +1,14 @@
+@mixin hover() {
+    filter: brightness(1);
+    transition: filter $trans;
+    will-change: transform;
+    &:hover {
+        filter: brightness(1.2);
+        transition: filter $trans;
+    }
+    &:focus,
+    &:active {
+        filter: brightness(.9);
+        transition: filter $trans;
+    }
+}

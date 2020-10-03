@@ -1,0 +1,12 @@
+.latest-cases {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: $gap;
+    padding: 20px 0;
+    background-color: #16163A;
+    .card {
+        width: 95px;
+        margin-right: 10px;
+    }
+}

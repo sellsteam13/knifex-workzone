@@ -1,0 +1,108 @@
+.footer {
+    padding: 30px 0 50px;
+    background-color: #16163A;
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-top {
+        width: 100%;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $border;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &__copyrights {
+            display: flex;
+            align-items: flex-end;
+            @media (max-width: 650px) {
+                flex-wrap: wrap;
+            }
+            &-logo {
+                flex-shrink: 0;
+                img {
+                    width: 70px;
+                    height: 19px;
+                }
+            }
+            &-text {
+                margin-left: 10px;
+                font-weight: 500;
+                font-size: rem(14);
+                color: #4A5282;
+                @media (max-width: 650px) {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+        &__designed {
+            font-size: rem(14);
+            color: #4A5282;
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+    &-privacy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 20px;
+        @media (max-width: 900px) {
+            padding-right: 0;
+        }
+        &__link {
+            font-size: rem(14);
+        }
+        &__text {
+            max-width: 690px;
+            font-size: rem(14);
+            line-height: 129%;
+            color: #4A5282;
+            margin-top: 15px;
+        }
+    }
+    &-socials {
+        margin-left: auto;
+        max-width: calc(100% - 690px);
+        @media (max-width: 900px) {
+            max-width: 100%;
+            width: 100%;
+            margin: 40px 0 0;
+        }
+        >ul {
+            display: flex;
+            align-items: center;
+        }
+        &__item {
+            margin-right: 18px;
+            &:last-child {
+                margin-right: 0;
+            }
+            >a {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                transition: background-color $trans;
+                &:hover {
+                    background-color: darken(#868EBE, 40%);
+                    transition: background-color $trans;
+                    svg {
+                        fill: $white;
+                        transition: fill $trans;
+                    }
+                }
+                svg {
+                    fill: #868EBE;
+                    transition: fill $trans;
+                }
+            }
+        }
+    }
+}

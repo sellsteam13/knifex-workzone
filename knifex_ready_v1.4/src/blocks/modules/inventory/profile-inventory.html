@@ -1,0 +1,49 @@
+<div class="profile-inventory">
+    <div class="profile-inventory-heading">
+        <div class="profile-inventory-heading__title">Инвентарь</div>
+        <a href="#" class="def-btn def-btn--green right-aligned">К истории игр</a>
+    </div>
+    <div class="profile-inventory-manage">
+        <div class="profile-inventory-manage__skins-amount">
+            <svg width="28" height="17" viewBox="0 0 28 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.45177 5.95893C4.75367 6.00408 4.12013 6.27148 3.76064 7.22418C3.71975 7.33286 3.62144 7.39883 3.50677 7.39883C3.31346 7.39883 2.71576 6.9146 2.54541 6.7977C2.54558 8.23883 3.20557 9.50548 4.77281 9.50548C6.09279 9.50548 7.00004 8.73951 7.00004 7.40215C7.00004 7.34773 6.98873 7.29575 6.98316 7.24238L5.45177 5.95893ZM10.513 0.545471C10.2492 0.545471 10.0019 0.662896 9.81331 0.833347C6.25653 4.02885 5.88643 4.10393 5.88643 5.04455C5.88643 5.2843 5.94298 5.51285 6.03833 5.7218L7.14881 6.65245C7.27427 6.68395 7.40355 6.70548 7.53841 6.70548C8.61913 6.70548 9.24554 5.90975 11.2126 2.21742C11.3411 1.9663 11.4545 1.69505 11.4545 1.4126C11.4545 0.906672 11.0021 0.545471 10.513 0.545471Z"/>
+                <path d="M12.5541 11.1033L7.6435 16.5455C7.6435 15.9359 6.79035 14.5016 6.36377 13.8607L9.39941 11.6112L10.1137 11.4661L11.8993 10.1963V9.83345V9.47064H12.0779L12.2267 8.89014L17.3754 6.16905V5.84252L17.0778 5.73368L17.8218 5.37087L18.6849 4.97178L18.923 5.08062L19.0123 4.97178L21.3634 3.70193H21.8991L23.6252 2.72234C24.0776 3.27382 24.5875 3.21818 24.7859 3.12143L26.1847 2.35953L26.0954 0.908283L26.4823 0.545471L26.8692 1.88787L27.3454 1.59763L28.0001 1.88787L27.1073 2.35953L26.9585 2.72234L22.3455 5.15318V5.40715L21.7801 5.73368L19.5777 6.96724L19.0123 7.58402H18.3873L17.2861 8.34592C18.3099 10.2325 19.9547 10.9703 20.6491 11.1033L20.3515 12.8448C18.5897 12.8448 16.8199 10.8372 16.1552 9.83345L15.8278 9.47064L16.0064 10.1963L15.7385 10.3051C15.679 10.293 15.5481 10.2543 15.5004 10.1963C15.4528 10.1382 15.302 9.78508 15.2326 9.61577L14.6671 9.83345L14.5183 10.0874V10.3777H14.429L14.1314 10.3777L14.0719 10.414L14.2207 10.9945L14.1017 11.2121L14.1017 13.2439L14.191 13.7518L13.8041 14.0784L13.4172 14.1509L13.1493 13.8607L13.0303 11.8289L12.7327 11.6112L12.5541 11.1033Z"/>
+            </svg>
+            <span>792</span>
+        </div>
+        <a href="#" class="def-btn def-btn--blue profile-inventory-manage__btn profile-inventory-manage__filter">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4369 0H0.563154C0.0635131 0 -0.188604 0.606234 0.165419 0.960258L4.5 5.29549V10.125C4.5 10.3085 4.58955 10.4805 4.73993 10.5858L6.61493 11.8979C6.98484 12.1568 7.5 11.8944 7.5 11.437V5.29549L11.8347 0.960258C12.188 0.606937 11.9376 0 11.4369 0Z"/>
+            </svg>
+            <span>Фильтр</span>
+        </a>
+        <a href="#" class="def-btn def-btn--transparent profile-inventory-manage__btn right-aligned">
+            Продать все скины за 162.94 $
+        </a>
+        <a href="#" class="def-btn def-btn--accent profile-inventory-manage__btn">
+            Выбрать все скины
+        </a>
+    </div>
+    <div class="profile-inventory-list chat-depends has-styled-scrollbar">
+        <!-- common card -->
+        @@include("../card/cards-types/card-common.html")
+        <!-- ancient card -->
+        @@include("../card/cards-types/card-ancient.html")
+        <!-- gold card -->
+        @@include("../card/cards-types/card-gold.html")
+        <!-- legenadary card -->
+        @@include("../card/cards-types/card-legendary.html")
+        <!-- mythical card -->
+        @@include("../card/cards-types/card-mythical.html")
+        <!-- orange card -->
+        @@include("../card/cards-types/card-orange.html")
+        <!-- rare card -->
+        @@include("../card/cards-types/card-rare.html")
+        <!-- uncommon card -->
+        @@include("../card/cards-types/card-uncommon.html")
+        <!-- common card -->
+        @@include("../card/cards-types/card-common.html")
+        <!-- ancient card -->
+        @@include("../card/cards-types/card-ancient.html")
+    </div>
+</div>

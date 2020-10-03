@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="page-layout">
+
+        <!-- navigation -->
+        @@include("../blocks/modules/nav/nav.html")
+
+        <!-- main content -->
+        <main class="page-layout-main main">
+
+            <div class="limiter">
+
+                <!-- title -->
+                @@include("../blocks/modules/heading/heading-admin.html")
+
+                <!-- admin-table module -->
+                @@include("../blocks/modules/admin-table/admin-table-promocodes.html")
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+    <!-- modals module -->
+    @@include("../blocks/modules/modals/modals.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

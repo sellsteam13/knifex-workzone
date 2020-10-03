@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar.html")
+
+        <!-- main content -->
+        <main class="main">
+            <div class="flex-layout limiter">
+                <div class="flex-layout-column">
+
+                    <!-- balance add heading -->
+                    @@include("../blocks/modules/heading/heading-balance-add.html")
+
+                </div>
+                <div class="flex-layout-column-left">
+
+                    <!-- balance add type module -->
+                    @@include("../blocks/modules/balance-add/balance-add-type.html")
+
+                </div>
+                <div class="flex-layout-column-right">
+
+                    <!-- balance add important text module -->
+                    @@include("../blocks/modules/balance-add/balance-add-important.html")
+
+                    <!-- balance add history table module -->
+                    @@include("../blocks/modules/balance-add/balance-add-history-table.html")
+
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>

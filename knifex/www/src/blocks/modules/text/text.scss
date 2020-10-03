@@ -1,0 +1,39 @@
+.text-block {
+    margin-bottom: $gap;
+    padding: 30px;
+    background: #16163A;
+    border-radius: $bradius;
+    @media (max-width: 1170px) {
+        padding: 20px;
+    }
+    >* {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    h3 {
+        font-weight: normal;
+        font-style: normal;
+        font-size: rem(16);
+        line-height: 1;
+        color: $white;
+    }
+    p {
+        font-size: rem(13);
+        line-height: lh(16, 13);
+        color: $tblue;
+    }
+    a {
+        text-decoration: underline;
+        @include hover();
+    }
+    li {
+        font-size: rem(13);
+        line-height: lh(16, 13);
+        color: $tblue;
+        &:before {
+            content: '- ';
+        }
+    }
+}

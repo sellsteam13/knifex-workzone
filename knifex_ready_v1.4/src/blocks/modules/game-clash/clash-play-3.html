@@ -1,0 +1,99 @@
+<section class="game">
+    <div class="game-heading">
+        <div class="game-heading__name game-heading__clash">
+            <svg width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9998 21.9999C14.7041 21.9999 17.1805 21.024 19.0961 19.4052C19.5283 19.0398 19.5096 18.3843 19.0938 18.0003C18.6972 17.6342 18.0854 17.6524 17.6662 17.9925C16.1191 19.2478 14.1473 19.9999 11.9998 19.9999C9.85124 19.9999 7.87856 19.2471 6.33113 17.9908C5.91199 17.6505 5.29998 17.6321 4.90333 17.9984C4.4876 18.3822 4.46882 19.0376 4.90088 19.403C6.81676 21.0232 9.29418 21.9999 11.9998 21.9999ZM4.90561 3.99962C4.4898 3.61569 4.4711 2.96012 4.90336 2.5948C6.81889 0.975888 9.29535 -6.05928e-05 11.9998 -6.0711e-05C14.7053 -6.08293e-05 17.1827 0.976696 19.0985 2.59681C19.5306 2.96218 19.5118 3.61758 19.0961 4.00144C18.6994 4.36768 18.0874 4.3493 17.6683 4.00902C16.1209 2.75277 14.1482 1.99994 11.9998 1.99994C9.85219 1.99994 7.88031 2.75213 6.33319 4.00742C5.91404 4.34751 5.30218 4.36579 4.90561 3.99962Z" stroke="none"/>
+                <rect width="10" height="2" rx="1" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 12.9998 15.9999)" stroke="none"/>
+                <path d="M22.9998 15.7868L22.9998 12.7304L22.9998 9.27192L22.9998 6.21549L17.2409 11.0011L22.9998 15.7868Z" fill="none" stroke-width="2"/>
+                <path d="M0.999756 15.7868L0.999756 12.7304L0.999756 9.27192L0.999755 6.21549L6.75863 11.0011L0.999756 15.7868Z" fill="none" stroke-width="2"/>
+            </svg>
+            <span>Clash</span>
+        </div>
+        <div class="game-heading__number">
+            — #678631
+        </div>
+        <a href="#" class="def-btn def-btn--green game-heading__how game-heading__moved-to-right">
+            Как играть?
+        </a>
+        <a href="#" class="def-btn def-btn--transparent game-heading__check-if-true">
+            Проверка честности
+        </a>
+        <button class="def-btn def-btn--transparent game-heading__volume">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.750525V11.2494C8 11.9193 7.18928 12.2493 6.71966 11.7797L3.93934 8.99999H0.75C0.335781 8.99999 0 8.66421 0 8.24999V3.74999C0 3.33577 0.335781 2.99999 0.75 2.99999H3.93934L6.71969 0.220181C7.18875 -0.248881 8 0.079869 8 0.750525ZM12 5.99999C12 4.94633 11.4629 3.98905 10.5634 3.43924C10.0922 3.1513 9.47666 3.29977 9.18863 3.77099C8.90059 4.24221 9.04912 4.85771 9.52034 5.14574C9.82072 5.3293 10 5.64865 10 5.99999C9.9999 6.16179 9.96062 6.32115 9.88551 6.46445C9.81039 6.60775 9.70169 6.73073 9.56869 6.82286C9.11481 7.13752 9.00194 7.76055 9.31659 8.21443C9.63128 8.66833 10.2543 8.78117 10.7082 8.46652C11.5171 7.90571 12 6.98368 12 5.99999Z"/>
+            </svg>
+            <span>Звук</span>
+        </button>
+    </div>
+    <div class="game-body">
+        <div class="game-body-column-w100 clash-track-outer">
+            <div class="clash-track-inner">
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-clash-win.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+                <!-- card -->
+                @@include("../card/cards-types/card-with-coeff.html")
+            </div>
+            <div class="clash-track-pointer">
+                <svg viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.49625 0.443611L0.418724 9.00121C-0.139575 9.59269 -0.139575 10.5491 0.418725 11.1343L1.76102 12.5564C2.31932 13.1479 3.2221 13.1479 3.77446 12.5564L9.5 6.49056L15.2255 12.5564C15.7838 13.1479 16.6866 13.1479 17.239 12.5564L18.5813 11.1343C19.1396 10.5428 19.1396 9.5864 18.5813 9.00121L10.5038 0.443611C9.95733 -0.14787 9.05455 -0.14787 8.49625 0.443611Z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="game-body-column-left clash-manage">
+            <div class="input-module input-module--white clash-manage__coeff">
+                <div class="input-module__title">Коэффициент</div>
+                <div class="input-module__inner">
+                    <div class="input-module-with-btns is-small">
+                        <input type="text" value="x2.00">
+                        <div class="input-module-with-btns__holder">
+                            <button class="def-btn def-btn--blue">x2</button>
+                            <button class="def-btn def-btn--blue">/2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="def-btn def-btn--big def-btn--accent clash-manage__submit">Сделать ставку</a>
+            <div class="game-body__win-chance">
+                <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.84559 2.84515C3.49636 2.19436 3.49636 1.13888 2.84559 0.488092C2.19481 -0.162697 1.13935 -0.162697 0.488571 0.488092C-0.162206 1.13888 -0.162206 2.19436 0.488571 2.84515C1.13961 3.4962 2.19481 3.4962 2.84559 2.84515ZM9.51221 7.15485C8.86143 6.50406 7.80597 6.50406 7.15519 7.15485C6.50442 7.80564 6.50442 8.86112 7.15519 9.51191C7.80597 10.1627 8.86143 10.1627 9.51221 9.51191C10.1632 8.86112 10.1632 7.8059 9.51221 7.15485ZM9.46169 1.12794L8.87263 0.538874C8.54711 0.213349 8.01951 0.213349 7.69425 0.538874L0.539352 7.69392C0.213833 8.01944 0.213833 8.54705 0.539352 8.87232L1.12841 9.46139C1.45393 9.78691 1.98153 9.78691 2.30679 9.46139L9.46169 2.30635C9.78721 1.98108 9.78721 1.45347 9.46169 1.12794Z"/>
+                </svg>
+                <span>49,5% шанс</span>
+            </div>
+        </div>
+        <div class="game-body-column-right game-outer game-clash">
+            <div class="game-clash-winner">
+                <div class="game-clash-winner__avatar is-avatar-container">
+                    <img src="./assets/img/pics/avatars/big-avatar.png" alt="">
+                </div>
+                <div class="game-clash-winner__nickname">
+                    <div class="game-clash-winner__nickname-title">Победитель:</div>
+                    <a href="#" class="game-clash-winner__nickname-link">Disk2001</a>
+                </div>
+            </div>
+            <div class="game-clash-overall">
+                <div class="game-clash-overall__item">
+                    <div class="game-clash-overall__item-title">На кону</div>
+                    <div class="game-clash-overall__item-content is-colored-green">$ 1,064.73</div>
+                </div>
+                <div class="game-clash-overall__item">
+                    <div class="game-clash-overall__item-title">Коэффициент</div>
+                    <div class="game-clash-overall__item-content">x2.065</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

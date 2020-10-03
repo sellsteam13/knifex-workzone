@@ -1,0 +1,253 @@
+// settings profile
+.settings-profile {
+    padding: 30px 30px 50px;
+    background: #16163A;
+    border-radius: $bradius;
+    position: relative;
+    margin-bottom: $gap;
+    @media (max-width: 1170px) {
+        padding: 20px 50px;
+    }
+    &-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 66px;
+        &__holder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: $bradius $bradius 0 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__change {
+            position: absolute;
+            z-index: 1;
+            left: 30px;
+            bottom: 0;
+            transform: translateY(50%);
+            cursor: pointer;
+            @media (max-width: 650px) {
+                left: 15px;
+            }
+        }
+    }
+    &-avatar {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto 30px;
+        width: 72px;
+        height: 72px;
+        &__holder {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #1C1C40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.is-empty {
+                svg {
+                    fill: #2F2F53;
+                }
+            }
+        }
+        &__change {
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+    &-nickname {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__holder {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: rem(16);
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                margin-left: 8px;
+            }
+        }
+        &__change {
+            padding: 0 20px;
+        }
+    }
+}
+
+// settings module
+.settings-module {
+    padding: 30px 30px 40px;
+    background: #16163A;
+    border-radius: $bradius;
+    margin-bottom: $gap;
+    @media (max-width: 1170px) {
+        padding: 20px;
+    }
+    .is-highlighted {
+        color: #F54646;
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-size: rem(16);
+        color: $white;
+    }
+    &-checkbox {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__text {
+            flex-grow: 1;
+            font-size: rem(14);
+            line-height: lh(16, 14);
+            color: $tblue;
+            padding-right: 10px;
+        }
+        &__switcher {
+            flex-shrink: 0;
+            transform: translateY(2px);
+        }
+    }
+    &-row {
+        display: flex;
+        margin-bottom: 30px;
+        align-items: center;
+        width: 100%;
+        @media (max-width: 650px) {
+            flex-wrap: wrap;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__title {
+            font-size: rem(14);
+            color: $tblue;
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+        &__content {
+            font-size: rem(14);
+            flex-grow: 1;
+            color: $white;
+            display: flex;
+            align-items: center;
+            @media (max-width: 650px) {
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 10px;
+            }
+            img {
+                margin-left: 8px;
+            }
+            >.def-btn {
+                margin-left: 20px;
+                padding: 0 20px;
+                @media (max-width: 650px) {
+                    margin-left: 0;
+                    padding: 0;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                &.right-aligned {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    &-content {
+        >p {
+            margin-bottom: 15px;
+            font-size: rem(13);
+            line-height: 123%;
+            color: $tblue;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// settings trade
+.settings-trade {
+    &__input {
+        position: relative;
+        input {
+            padding-left: 23px;
+            @media (max-width: 650px) {
+                padding-left: 10px;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 12px;
+            background: url('../img/icons/icon-success--single.svg') no-repeat center;
+            background-size: 100% 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity $trans;
+        }
+        &.is-checked {
+            &:after {
+                opacity: 1;
+                transition: opacity $trans;
+                @media (max-width: 650px) {
+                    display: none;
+                }
+            }
+            input {
+                color: #4DB283;
+            }
+        }
+    }
+}
+
+// settings referral
+.settings-referral {
+    &-link {
+        display: flex;
+        align-items: center;
+        @media (max-width: 650px) {
+            flex-wrap: wrap;
+        }
+        &__holder {
+            flex-grow: 1;
+            width: auto;
+            @media (max-width: 650px) {
+                width: 100%;
+            }
+        }
+        &__qr {
+            width: 277px;
+            margin-left: 20px;
+            @media (max-width: 650px) {
+                width: 100%;
+                margin: 10px 0 0;
+            }
+        }
+    }
+}

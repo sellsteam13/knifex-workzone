@@ -1,0 +1,42 @@
+<div class="withdraw-checked">
+    <div class="withdraw-inventory-heading">
+        <div class="withdraw-inventory-heading__title">Выбранные скины</div>
+        <a href="#" class="def-btn def-btn--accent right-aligned withdraw-inventory-heading__out">Вывести все (2)</a>
+    </div>
+    <div class="withdraw-inventory-outer">
+        <div class="withdraw-checked-info">
+            <div class="withdraw-checked-info__item">
+                Выбрано <span class="withdraw-checked-info__item-amount">0</span> <span class="is-colored-green">$</span> из <span class="withdraw-checked-info__item-amount">5.8</span> <span class="is-colored-green">$</span> доступных
+            </div>
+            <div class="withdraw-checked-info__item right-aligned">
+                Отправлено <span class="withdraw-checked-info__item-amount">0</span> <span class="is-colored-green">$</span> из <span class="withdraw-checked-info__item-amount">5.8</span> <span class="is-colored-green">$</span> в итоге
+            </div>
+        </div>
+        <div class="inventory-list">
+            <div class="inventory-list-track has-styled-scrollbar">
+                <!-- common card -->
+                @@include("../card/cards-types/card-withdrawal-3.html")
+                <!-- common card -->
+                @@include("../card/cards-types/card-withdrawal-4.html")
+                <!-- common card -->
+                @@include("../card/cards-types/card-withdrawal-5.html")
+                <!-- common card -->
+                @@include("../card/cards-types/card-withdrawal-6.html")
+                <!-- common card -->
+                @@include("../card/cards-types/card-withdrawal-7.html")
+            </div>
+        </div>
+        <div class="withdraw-inventory-pagination">
+            <a href="#" class="def-btn def-btn--dark withdraw-inventory-pagination__arrow withdraw-inventory-pagination__prev">
+                <img src="./assets/img/icons/icon-chevron-down.svg" alt="">
+            </a>
+            <a href="#" class="def-btn def-btn--dark withdraw-inventory-pagination__btn is-active">1</a>
+            <a href="#" class="def-btn def-btn--dark withdraw-inventory-pagination__btn">2</a>
+            <div class="withdraw-inventory-pagination__btn withdraw-inventory-pagination__dots">...</div>
+            <a href="#" class="def-btn def-btn--dark withdraw-inventory-pagination__btn">10</a>
+            <a href="#" class="def-btn def-btn--dark withdraw-inventory-pagination__arrow withdraw-inventory-pagination__next">
+                <img src="./assets/img/icons/icon-chevron-down.svg" alt="">
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,544 @@
+// withdraw container
+.withdraw-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+// withdraw heading
+.withdraw-heading {
+    height: 70px;
+    margin: 0 10px $gap;
+    background: #111135;
+    border-radius: $bradius;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    @media (max-width: 650px) {
+        padding: 20px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 500;
+        font-size: rem(16);
+        color: $white;
+        @media (max-width: 650px) {
+            position: static;
+            text-align: center;
+            width: 100%;
+            transform: translate(0);
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: rem(14);
+        @include hover();
+        @media (max-width: 650px) {
+            margin: 20px 0 0px;
+            justify-content: center;
+            width: 100%;
+            order: 2;
+            &.right-aligned {
+                display: none;
+            }
+        }
+        svg {
+            fill: $tblue;
+            margin-right: 10px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// withdraw latest
+.withdraw-latest {
+    width: 100%;
+    margin: 0 10px $gap;
+    @media (max-width: 800px) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .t-head {
+        margin-bottom: 0;
+        background-color: transparent;
+    }
+    &--highlighted {
+        a {
+            color: #FF9147;
+            @include hover();
+        }
+    }
+    .table {
+        @media (max-width: 850px) {
+            min-width: 810px;
+            width: 810px;
+            max-width: 810px;
+        }
+        .t-body {
+            padding-top: 10px;
+            .t-row {
+                padding: 19px 0px;
+                margin-bottom: 10px;
+                background: #16163A;
+                border-radius: $bradius;
+                border-bottom: none;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .t-item {
+            svg {
+                margin-left: 5px;
+            }
+            .def-btn {
+                padding: 0 15px;
+            }
+            &:nth-child(1) {
+                width: cw(235, 1380);
+                padding-left: 30px;
+                @media (max-width: 900px) {
+                    padding-left: 15px;
+                }
+            }
+            &:nth-child(2) {
+                width: cw(309, 1380);
+            }
+            &:nth-child(3) {
+                width: cw(214, 1380);
+            }
+            &:nth-child(4) {
+                width: cw(235, 1380);
+            }
+            &:nth-child(5) {
+                width: cw(165, 1380);
+            }
+            &:nth-child(6) {
+                width: cw(222, 1380);
+                padding-right: 30px;
+                @media (max-width: 900px) {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+// withdraw inventory and checked
+.withdraw-inventory,
+.withdraw-checked {
+    width: calc(50% - 20px);
+    margin: 0 10px $gap;
+    background: #16163A;
+    border-radius: $bradius;
+    @media (max-width: 1170px) {
+        width: calc(100% - 20px);
+    }
+}
+
+// withdraw inventory
+.withdraw-inventory {
+    &-heading {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        border-bottom: 1px solid $border;
+        @media (max-width: 650px) {
+            height: unset;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .def-btn {
+            margin-right: 10px;
+            padding: 0 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__able {
+            margin-right: 10px;
+            @media (max-width: 650px) {
+                display: none;
+            }
+        }
+        &__out {
+            @media (max-width: 450px) {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+        &__title {
+            font-size: rem(14);
+            color: $white;
+            @media (max-width: 650px) {
+                order: -3;
+            }
+        }
+        &__refresh {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            border-radius: 3px;
+            background-color: #16163A;
+            @include hover();
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 650px) {
+                order: -2;
+                margin-left: auto;
+            }
+        }
+        &__input {
+            width: 80px;
+            margin-right: 15px;
+            position: relative;
+            @media (max-width: 650px) {
+                width: calc(50% - 5px);
+                margin-right: 0;
+            }
+            svg {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            input {
+                padding-left: 28px;
+            }
+            &--min {
+                @media (max-width: 650px) {
+                    margin-right: 10px;
+                }
+            }
+            &--search {
+                width: 100px;
+                @media (max-width: 650px) {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+                svg {
+                    transform: translateY(-50%) scale(-1, 1);
+                }
+            }
+        }
+        &__sort {
+            display: flex;
+            align-items: center;
+            @include hover();
+            @media (max-width: 650px) {
+                order: -1;
+                margin-left: 5px;
+            }
+            svg {
+                margin-right: 10px;
+            }
+            span {
+                font-size: rem(14);
+            }
+            &.is-sorted {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &-outer {
+        padding: 30px;
+        @media (max-width: 1170px) {
+            padding: 20px;
+        }
+        .inventory-list {
+            &:before {
+                padding-bottom: calc(290px + (25% - 10px) * 1.14);
+                @media (max-width: 1650px) {
+                    padding-bottom: calc(290px + (33.33% - 10px) * 1.14);
+                }
+            }
+            &-track {
+                @media (max-width: 650px) {
+                    min-height: 200px;
+                    max-height: 412px;
+                }
+                .card {
+                    width: calc(25% - 10px);
+                    @media (max-width: 1650px) {
+                        width: calc(33.33% - 10px);
+                    }
+                    @media (max-width: 1170px) {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        min-height: 36px;
+        &__arrow {
+            width: 36px;
+            margin: 0 13px;
+            @media (max-width: 370px) {
+                margin: 0 8px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__prev {
+            img {
+                transform: rotate(90deg);
+            }
+        }
+        &__next {
+            img {
+                transform: rotate(-90deg);
+            }
+        }
+        &__btn {
+            width: 36px;
+            margin: 0 2px;
+            justify-content: center;
+            color: $tblue;
+            &.is-active {
+                background: $abtn;
+                color: $white;
+            }
+        }
+        &__dots {
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 3px;
+            font-size: rem(16);
+            margin: 0;
+            width: 26px;
+            @media (max-width: 370px) {
+                display: none;
+            }
+        }
+    }
+}
+
+// withdraw checked
+.withdraw-checked {
+    .card {
+        &:hover {
+            filter: brightness(1);
+        }
+    }
+    &-info {
+        height: 16px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 650px) {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        &__item {
+            font-size: rem(14);
+            @media (max-width: 650px) {
+                width: 100%;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &-amount {
+                color: $white;
+            }
+        }
+    }
+    &-empty {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__text {
+            font-size: rem(13);
+            margin-bottom: 15px;
+            text-align: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__btn {
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+    }
+}
+
+// withdraw skins
+.withdraw-skins {
+    background: #16163A;
+    border-radius: $bradius;
+    width: 100%;
+    margin: 0 10px $gap;
+    @media (max-width: 1170px) {
+        width: calc(100% - 20px);
+        padding: 0px 20px 10px;
+    }
+    &__title {
+        padding: 30px;
+        border-bottom: 1px solid $border;
+        font-size: rem(14);
+        color: $white;
+        @media (max-width: 1170px) {
+            padding: 20px;
+            margin: 0 -20px;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 17px 10px;
+        @media (max-width: 1170px) {
+            padding: 20px 0 10px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            min-height: 422px;
+            max-height: 422px;
+        }
+        .card {
+            width: calc(12.5% - 26px);
+            margin: 0 13px 20px;
+            @media (max-width: 1170px) {
+                width: 100px;
+                margin: 0 10px 0 0;
+            }
+            @media (max-width: 650px) {
+                margin-bottom: 10px;
+                &:nth-child(2n) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// withdraw alert
+.withdraw-alert {
+    padding: 15px 30px;
+    width: 100%;
+    margin: 0 10px $gap;
+    border-radius: $bradius;
+    background: rgba(255, 0, 51, 0.2);
+    border: 1px dashed #DC143C;
+    color: $white;
+    font-size: rem(16);
+    line-height: 125%;
+    @media (max-width: 1170px) {
+        padding: 15px 20px;
+        font-size: rem(14);
+    }
+    &--underlined {
+        text-decoration: underline;
+    }
+}
+
+// withdraw history
+.withdraw-history {
+    margin: 0 10px $gap;
+    width: 100%;
+    @media (max-width: 1170px) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .t-head {
+        margin-bottom: 0;
+        background-color: transparent;
+    }
+    .table {
+        @media (max-width: 1170px) {
+            min-width: 1200px;
+            max-width: 1200px;
+            width: 1200px;
+        }
+        .t-body {
+            .t-row {
+                padding: 19px 0px;
+                margin-bottom: 10px;
+                background: #16163A;
+                border-radius: $bradius;
+                border-bottom: none;
+                .t-item {
+                    color: $white;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .t-item {
+            svg {
+                margin-left: 5px;
+            }
+            .def-btn {
+                width: 70px;
+            }
+            &:nth-child(1) {
+                width: cw(200, 1380);
+                padding-left: 30px;
+                @media (max-width: 1170px) {
+                    padding-left: 15px;
+                }
+            }
+            &:nth-child(2) {
+                width: cw(274, 1380);
+            }
+            &:nth-child(3) {
+                width: cw(179, 1380);
+            }
+            &:nth-child(4) {
+                width: cw(150, 1380);
+            }
+            &:nth-child(5) {
+                width: cw(159, 1380);
+            }
+            &:nth-child(6) {
+                width: cw(159, 1380);
+            }
+            &:nth-child(7) {
+                width: calc(18.768% - 100px);
+            }
+            &:nth-child(8) {
+                width: 100px;
+                padding-right: 30px;
+                @media (max-width: 1170px) {
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}

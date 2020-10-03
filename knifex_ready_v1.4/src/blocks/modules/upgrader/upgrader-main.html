@@ -1,0 +1,55 @@
+<div class="upgrader-module upgrader-main">
+    <div class="upgrader-main-circle">
+        <div class="upgrader-main-circle__pointer">
+            <svg width="19" height="13" viewBox="0 0 19 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49625 0.443611L0.418724 9.00121C-0.139575 9.59269 -0.139575 10.5491 0.418725 11.1343L1.76102 12.5564C2.31932 13.1479 3.2221 13.1479 3.77446 12.5564L9.5 6.49056L15.2255 12.5564C15.7838 13.1479 16.6866 13.1479 17.239 12.5564L18.5813 11.1343C19.1396 10.5428 19.1396 9.5864 18.5813 9.00121L10.5038 0.443611C9.95733 -0.14787 9.05455 -0.14787 8.49625 0.443611Z"/>
+            </svg>
+        </div>
+        <!--
+            Установить значение колеса:
+            setCircleProgress(значение,длительность,callback);
+            Пояснения:
+            Значение - от 0 (0%) до 1 (100%),
+            Длительность - число в миллисекундах (прим. 1сек = 1000) / Дефолтное значение 1000 (1сек),
+            Сallback - функция, которая выполняется после анимации заполнения кольца.
+
+            Обнулить значение колеса:
+            resetCircleProgress();
+        -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                setCircleProgress(.5, 1200, () => {
+                    console.log('Circle animated!');
+                });
+                setTimeout(() => {
+                    resetCircleProgress()
+                }, 5000);
+            });
+        </script>
+        <div class="upgrader-main-circle__track"></div>
+        <div class="upgrader-main-circle__center"></div>
+        <div class="upgrader-main-circle__outer"></div>
+        <div class="upgrader-main-circle__inner"></div>
+    </div>
+    <div class="upgrader-main-coeffs">
+        <label class="upgrader-main-coeffs__item">
+            <input type="radio" hidden name="upgraderTabsGroup" checked>
+            <span>3x</span>
+        </label>
+        <label class="upgrader-main-coeffs__item">
+            <input type="radio" hidden name="upgraderTabsGroup">
+            <span>5x</span>
+        </label>
+        <label class="upgrader-main-coeffs__item">
+            <input type="radio" hidden name="upgraderTabsGroup">
+            <span>10x</span>
+        </label>
+        <label class="upgrader-main-coeffs__item">
+            <input type="radio" hidden name="upgraderTabsGroup">
+            <span>50x</span>
+        </label>
+    </div>
+    <a href="#" class="def-btn def-btn--big def-btn--accent upgrader-main__submit">
+        Улучшить предмет
+    </a>
+</div>

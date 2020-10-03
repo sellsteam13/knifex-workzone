@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("../blocks/modules/head/head.html")
+
+<body>
+
+    <!-- content wrapper -->
+    <div class="wrapper">
+
+        <!-- header -->
+        @@include("../blocks/modules/header/header.html")
+
+        <!-- nav-bar -->
+        @@include("../blocks/modules/nav-bar/nav-bar.html")
+
+        <!-- main content -->
+        <main class="main">
+            <div class="flex-layout limiter">
+                <div class="flex-layout-column-left">
+
+                    <!-- inventory module -->
+                    @@include("../blocks/modules/inventory/inventory.html")
+
+                    <!-- lucker module -->
+                    @@include("../blocks/modules/lucker/lucker.html")
+
+                </div>
+                <div class="flex-layout-column-right">
+
+                    <!-- classic play module -->
+                    @@include("../blocks/modules/game-classic/game-classic-play-5.html")
+
+                    <!-- classic table -->
+                    @@include("../blocks/modules/game-classic/game-classic-table.html")
+
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        @@include("../blocks/modules/footer/footer.html")
+
+    </div>
+
+    <!-- chat module -->
+    @@include("../blocks/modules/chat/chat.html")
+
+    <!-- connecting scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor.js"></script>
+
+</body>
+
+</html>
